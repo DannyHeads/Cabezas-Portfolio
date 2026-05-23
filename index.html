@@ -190,6 +190,114 @@
         max-width: 360px;
       }
     }
+
+    @page {
+      size: letter;
+      margin: 0.35in;
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        background: white;
+      }
+
+      .page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero {
+        height: 230px;
+        background: linear-gradient(135deg, #0a233c, #213f67, #4f79a8) !important;
+        color: white !important;
+      }
+
+      .hero-content {
+        margin-top: 10px;
+      }
+
+      .profile-img {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 12px;
+      }
+
+      .profile-img svg {
+        width: 58px;
+        height: 58px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .mission {
+        max-width: 700px;
+        margin: 30px auto;
+        gap: 30px;
+      }
+
+      .mission-graphic {
+        width: 260px;
+        height: 165px;
+        background: linear-gradient(135deg, #213f67, #4f79a8) !important;
+        color: white !important;
+      }
+
+      .mission-graphic-icon {
+        font-size: 42px;
+        margin-bottom: 8px;
+      }
+
+      .mission-graphic-text {
+        font-size: 13px;
+      }
+
+      .mission-text h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+
+      .mission-text p {
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .skills {
+        padding: 32px 20px 38px;
+        background: linear-gradient(135deg, #213f67, #2f5f8f) !important;
+        color: white !important;
+      }
+
+      .skills h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+
+      .skills p {
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+
+      .skill {
+        padding: 8px 13px;
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.22) !important;
+        color: white !important;
+      }
+    }
   </style>
 </head>
 
