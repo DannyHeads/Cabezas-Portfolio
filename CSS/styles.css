@@ -18,7 +18,8 @@ body {
   color: #222;
 }
 
-button {
+button,
+a {
   font-family: inherit;
 }
 
@@ -51,8 +52,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .hero-content {
@@ -209,6 +210,261 @@ button {
 
 
 /* =====================================================
+   Featured Projects Section
+===================================================== */
+
+.projects {
+  padding: 50px 30px;
+  background-color: #f4f7fb;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 10px;
+  color: #254675;
+  font-size: 28px;
+}
+
+.projects-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-list-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   Expandable Project Card
+===================================================== */
+
+.portfolio-project-card {
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 6px 20px rgba(10, 35, 60, 0.16);
+  text-align: left;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.portfolio-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(10, 35, 60, 0.22);
+}
+
+.portfolio-project-card:focus-visible {
+  outline: 4px solid rgba(79, 121, 168, 0.5);
+  outline-offset: 4px;
+}
+
+.project-summary {
+  padding: 32px;
+  background: linear-gradient(
+    135deg,
+    #0a233c,
+    #213f67,
+    #4f79a8
+  );
+  color: white;
+}
+
+.project-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project-type {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 7px 11px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.18);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+
+.portfolio-project-card h3 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.project-hook {
+  max-width: 700px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.expand-instruction {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.expand-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 26px;
+  line-height: 1;
+  transition:
+    transform 0.3s ease,
+    background-color 0.2s ease;
+}
+
+.portfolio-project-card:hover .expand-icon {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.portfolio-project-card.expanded .expand-icon {
+  transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   Expanded Project Details
+===================================================== */
+
+.project-details {
+  max-height: 0;
+  padding: 0 32px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition:
+    max-height 0.6s ease,
+    padding 0.4s ease,
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.portfolio-project-card.expanded .project-details {
+  max-height: 2500px;
+  padding: 32px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-detail-section {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dce4ed;
+}
+
+.project-detail-section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.project-detail-section h4 {
+  margin-bottom: 9px;
+  color: #254675;
+  font-size: 18px;
+}
+
+.project-detail-section p {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.project-detail-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   Technologies and Features
+===================================================== */
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-technologies span {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #e6eef7;
+  color: #254675;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.feature-list {
+  padding-left: 24px;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  padding-left: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   Project Links
+===================================================== */
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background-color: #254675;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+  background-color: #3b6594;
+}
+
+.project-button.secondary {
+  border: 2px solid #254675;
+  background-color: transparent;
+  color: #254675;
+}
+
+.project-button.secondary:hover {
+  background-color: #e6eef7;
+}
+
+
+/* =====================================================
    Responsive Design
 ===================================================== */
 
@@ -241,6 +497,18 @@ button {
     width: 100%;
     max-width: 360px;
   }
+
+  .projects {
+    padding: 45px 20px;
+  }
+
+  .project-summary {
+    padding: 26px;
+  }
+
+  .portfolio-project-card.expanded .project-details {
+    padding: 26px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -269,6 +537,36 @@ button {
   .skills {
     padding: 28px 15px 32px;
   }
+
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .project-summary {
+    padding: 22px;
+  }
+
+  .portfolio-project-card.expanded .project-details {
+    padding: 22px;
+  }
+
+  .portfolio-project-card h3 {
+    font-size: 24px;
+  }
+
+  .expand-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 23px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-button {
+    width: 100%;
+  }
 }
 
 
@@ -295,12 +593,6 @@ button {
 
   .hero {
     min-height: 230px;
-    background: linear-gradient(
-      135deg,
-      #0a233c,
-      #213f67,
-      #4f79a8
-    ) !important;
     color: white !important;
   }
 
@@ -310,25 +602,23 @@ button {
 
   .skills {
     padding: 26px 20px 30px;
-    background: linear-gradient(
-      135deg,
-      #213f67,
-      #2f5f8f
-    ) !important;
     color: white !important;
   }
 
-  .mission-graphic {
-    background: linear-gradient(
-      135deg,
-      #213f67,
-      #4f79a8
-    ) !important;
-    color: white !important;
+  .portfolio-project-card {
+    break-inside: avoid;
+    cursor: default;
   }
 
-  .skill {
-    background-color: rgba(255, 255, 255, 0.22) !important;
-    color: white !important;
+  .project-details {
+    max-height: none;
+    padding: 32px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .expand-icon,
+  .expand-instruction {
+    display: none;
   }
 }

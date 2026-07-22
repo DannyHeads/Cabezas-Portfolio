@@ -7,7 +7,7 @@
 
   <meta
     name="description"
-    content="Daniel Cabezas portfolio showcasing project-focused development, technical skills, and professional experience."
+    content="Daniel Cabezas portfolio showcasing project-focused development, technical skills, and software projects."
   />
 
   <title>Daniel Cabezas Portfolio</title>
@@ -18,10 +18,12 @@
 <body>
   <main class="page">
 
-    <!-- Hero Section -->
+    <!-- =====================================================
+         Hero Section
+    ====================================================== -->
+
     <section class="hero">
       <div class="hero-content">
-
         <div class="profile-img" aria-label="Profile silhouette">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
@@ -38,9 +40,12 @@
       </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission">
 
+    <!-- =====================================================
+         Mission Section
+    ====================================================== -->
+
+    <section class="mission">
       <div class="mission-graphic">
         <div class="mission-graphic-content">
           <div class="mission-graphic-icon">&lt;/&gt;</div>
@@ -55,23 +60,198 @@
         <h2>Mission</h2>
 
         <p>
-          My mission is to create practical, project-focused solutions that help
-          teams build, improve, and deliver meaningful work. I enjoy turning
-          ideas into functional applications, supporting development workflows,
-          and using technology to make projects more organized, efficient, and
-          impactful.
+          My mission is to create practical, project-focused solutions that
+          help teams build, improve, and deliver meaningful work. I enjoy
+          turning ideas into functional applications, supporting development
+          workflows, and using technology to make projects more organized,
+          efficient, and impactful.
         </p>
       </div>
-
     </section>
 
-    <!-- Skills Section -->
+
+    <!-- =====================================================
+         Skills Section
+    ====================================================== -->
+
     <section class="skills">
       <h2>Skills</h2>
 
       <p>Here are a few of the skills I bring to the table:</p>
 
       <div class="skill-list" id="skillList"></div>
+    </section>
+
+
+    <!-- =====================================================
+         Featured Projects Section
+    ====================================================== -->
+
+    <section class="projects">
+      <h2>Featured Projects</h2>
+
+      <p class="projects-intro">
+        Select a project card to learn more about what I built, the problem I
+        addressed, the technologies I used, and what I learned.
+      </p>
+
+      <div class="project-list-container">
+
+        <!-- NASA Space Explorer Project Card -->
+        <article
+          class="portfolio-project-card"
+          id="nasaProjectCard"
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-controls="nasaProjectDetails"
+        >
+          <!-- Information visible before expanding -->
+          <div class="project-summary">
+            <div class="project-heading">
+              <div>
+                <span class="project-type">
+                  API-POWERED WEB APPLICATION
+                </span>
+
+                <h3>NASA Space Explorer</h3>
+              </div>
+
+              <span class="expand-icon" aria-hidden="true">+</span>
+            </div>
+
+            <p class="project-hook">
+              Explore NASA's Astronomy Picture of the Day images through a
+              responsive, searchable date-based gallery.
+            </p>
+
+            <p class="expand-instruction">
+              Click to view project details
+            </p>
+          </div>
+
+
+          <!-- Information revealed after expanding -->
+          <div
+            class="project-details"
+            id="nasaProjectDetails"
+            aria-hidden="true"
+          >
+            <div class="project-detail-section">
+              <h4>Project Name</h4>
+
+              <p>NASA Space Explorer</p>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>One-Line Hook</h4>
+
+              <p>
+                Explore NASA's Astronomy Picture of the Day images through a
+                responsive, searchable date-based gallery.
+              </p>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>The Problem</h4>
+
+              <p>
+                NASA provides years of astronomy images and educational
+                information, but users need a simple way to explore content
+                from specific dates. This project gives students, space
+                enthusiasts, and curious users an accessible way to search
+                NASA's Astronomy Picture of the Day collection.
+              </p>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>What I Built</h4>
+
+              <p>
+                I built a responsive web application that connects to NASA's
+                Astronomy Picture of the Day API. Users can select a date
+                range, retrieve NASA images and information, and explore the
+                results through a dynamically generated gallery.
+              </p>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>Tech Stack</h4>
+
+              <div class="project-technologies">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>NASA APOD API</span>
+                <span>Fetch API</span>
+                <span>JSON</span>
+              </div>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>Key Features</h4>
+
+              <ol class="feature-list">
+                <li>
+                  Retrieves NASA images, titles, dates, and descriptions from
+                  a selected date range.
+                </li>
+
+                <li>
+                  Prevents future-date searches and automatically corrects
+                  invalid date selections.
+                </li>
+
+                <li>
+                  Displays results in a responsive gallery with loading and
+                  error feedback.
+                </li>
+              </ol>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>What I Learned</h4>
+
+              <p>
+                <strong>Technical skill:</strong> I improved my ability to
+                retrieve API data asynchronously, process JSON responses, and
+                dynamically update a webpage.
+              </p>
+
+              <p>
+                <strong>Non-technical skill:</strong> I learned to anticipate
+                common user mistakes and design clearer feedback that makes an
+                application easier to understand.
+              </p>
+            </div>
+
+            <div class="project-detail-section">
+              <h4>Live Link / Repo</h4>
+
+              <div class="project-actions">
+                <a
+                  class="project-button"
+                  href="https://dannyheads.github.io/07-nasa-space-explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Live Project
+                </a>
+
+                <a
+                  class="project-button secondary"
+                  href="https://github.com/DannyHeads/07-nasa-space-explorer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
   </main>
