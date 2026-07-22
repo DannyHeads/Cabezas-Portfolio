@@ -5,7 +5,7 @@
 const skills = [
   "☁ Generative AI",
   "▣ JavaScript",
-  "◆ Python",
+  "◆ HTML",
   "🎓 Teaching & Mentoring",
   "☷ Project Management"
 ];
